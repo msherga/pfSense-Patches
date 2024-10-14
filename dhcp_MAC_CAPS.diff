@@ -1,0 +1,13 @@
+Espressomatic @UnraidForums - 4 Sep 2024
+ 
+--- a/src/usr/local/www/services_dhcp.php   2024-09-04 18:42:38
++++ b/src/usr/local/www/services_dhcp.php   2024-09-04 18:45:51
+@@ -1943,7 +1943,7 @@
+ 							<?php endif; ?>
+ 						</td>
+ 						<td ondblclick="document.location='services_dhcp_edit.php?if=<?=htmlspecialchars($if)?>&amp;id=<?=$i?>';">
+-							<?=htmlspecialchars($mapent['mac'])?>
++							<?=strtoupper(htmlspecialchars($mapent['mac']))?>
+ 						</td>
+ <?php
+ 			if ($got_cid):
