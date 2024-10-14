@@ -1,8 +1,11 @@
-# pfSense-Patches
-Patches for pfSense Firewall/Router
+# Patches for pfSense Firewall/Router
 
-**leases_sorted**
+
+## WebUI Patches 
+**leases_Sorted**
+
 Sort DHCP lease table in ascending IP order, capitalize MAC addresses, reformat MFR string, remove down icon, remove N/A text 
 
 **DHCP_MAC_CAPS**
+
 Capitalize MAC addresses in DHCP Server static assigment table
