@@ -13,7 +13,7 @@ Espressomatic @UnraidForums - 4 Sep 2024
  if ($_REQUEST['order']) {
  	usort($leases['lease'], function($a, $b) {
  		return strcmp($a[$_REQUEST['order']], $b[$_REQUEST['order']]);
-@@ -292,7 +294,7 @@
+@@ -292,7 +296,7 @@
  		}
  	}
  
@@ -22,7 +22,7 @@ Espressomatic @UnraidForums - 4 Sep 2024
  	$mac_hi = strtoupper($mac[0] . $mac[1] . $mac[3] . $mac[4] . $mac[6] . $mac[7]);
  ?>
  				<tr>
-@@ -301,7 +303,7 @@
+@@ -301,7 +305,7 @@
  <?php if ($data['online'] === $online_string): ?>
  						<i class="fa fa-arrow-up text-success online" title="<?=htmlspecialchars($data['online'])?>"></i>
  <?php else: ?>
@@ -31,7 +31,7 @@ Espressomatic @UnraidForums - 4 Sep 2024
  <?php endif; ?>
  					</td>
  					<td><?=htmlspecialchars($data['ip'])?></td>
-@@ -312,7 +314,7 @@
+@@ -312,7 +316,7 @@
  <?php endif; ?>
  						<?=htmlspecialchars($mac)?>
  
@@ -40,7 +40,7 @@ Espressomatic @UnraidForums - 4 Sep 2024
  							(<?=htmlspecialchars($mac_man[$mac_hi])?>)
  						<?php endif; ?>
  					</td>
-@@ -322,8 +324,8 @@
+@@ -322,8 +326,8 @@
  						<td><?=htmlspecialchars($data['starts'])?></td>
  						<td><?=htmlspecialchars($data['ends'])?></td>
  					<? else: ?>
