@@ -2,12 +2,12 @@ Espressomatic @UnraidForums - 4 Sep 2024
 
 --- a/src/usr/local/www/status_dhcp_leases.php		2024-09-04 18:42:15
 +++ b/src/usr/local/www/status_dhcp_leases.php		2024-09-04 18:45:28
-@@ -131,6 +131,8 @@
+@@ -131,6 +131,10 @@
  $static_string = gettext("static");
  $dynamic_string = gettext("dynamic");
  
 +usort($leases['lease'], function($a, $b) {
-+    return ip2long($a['ip']) <=> ip2long($b['ip']);
++    return strcmp($a['ip'], $b['ip']);
 +});
 +
  if ($_REQUEST['order']) {
