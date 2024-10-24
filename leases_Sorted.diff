@@ -6,11 +6,12 @@ Espressomatic @UnraidForums - 4 Sep 2024
  $dynamic_string = gettext("dynamic");
  $static_string = gettext("static");
  
-+$leases['lease']=array_reverse($leases['lease']);
++$leases['lease'] = array_reverse($leases['lease']);
 +
  if ($_REQUEST['order']) {
 -	usort($leases['lease'], function($a, $b) {
 -		return strcmp($a[$_REQUEST['order']], $b[$_REQUEST['order']]);
++	// Sort by IP address in natural order, without separating static/dynamic
 +	usort($leases['lease'], function($a, $b) {
 +		return ip2long($a['ip']) <=> ip2long($b['ip']);
  	});
