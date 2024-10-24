@@ -7,7 +7,7 @@ Espressomatic @UnraidForums - 4 Sep 2024
  $static_string = gettext("static");
  
 +usort($leases['lease'], function($a, $b) {
-+    return strcmp($a['ip'], $b['ip']);
++    return ip2long($a['ip']) <=> ip2long($b['ip']);
 +});
 +
  if ($_REQUEST['order']) {
