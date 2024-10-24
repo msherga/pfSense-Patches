@@ -6,7 +6,7 @@ Espressomatic @UnraidForums - 4 Sep 2024
  $static_string = gettext("static");
  $dynamic_string = gettext("dynamic");
  
-+usort($leases['lease'], function($a, $b) {
++ usort($leases['lease'], function($a, $b) {
 +    return strcmp($a['ip'], $b['ip']);
 +});
 +
