@@ -9,8 +9,13 @@ Espressomatic @UnraidForums - 4 Sep 2024
 +$leases['lease']=array_reverse($leases['lease']);
 +
  if ($_REQUEST['order']) {
- 	usort($leases['lease'], function($a, $b) {
- 		return strcmp($a[$_REQUEST['order']], $b[$_REQUEST['order']]);
+-	usort($leases['lease'], function($a, $b) {
+-		return strcmp($a[$_REQUEST['order']], $b[$_REQUEST['order']]);
++	usort($leases['lease'], function($a, $b) {
++		return ip2long($a['ip']) <=> ip2long($b['ip']);
+ 	});
+ }
+ 
 @@ -292,7 +294,7 @@
  		}
  	}
