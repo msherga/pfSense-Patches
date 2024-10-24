@@ -7,8 +7,8 @@ Espressomatic @UnraidForums - 4 Sep 2024
  $dynamic_string = gettext("dynamic");
  
 + usort($leases['lease'], function($a, $b) {
-+    return strcmp($a['ip'], $b['ip']);
-+});
++     return strcmp($a['ip'], $b['ip']);
++ });
 +
  if ($_REQUEST['order']) {
  	usort($leases['lease'], function($a, $b) {
