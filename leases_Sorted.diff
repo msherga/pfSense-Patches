@@ -1,5 +1,3 @@
-Espressomatic @UnraidForums - 4 Sep 2024
-
 --- a/src/usr/local/www/status_dhcp_leases.php		2024-09-04 18:42:15
 +++ b/src/usr/local/www/status_dhcp_leases.php		2024-09-04 18:45:28
 @@ -131,6 +131,10 @@
@@ -22,15 +20,6 @@ Espressomatic @UnraidForums - 4 Sep 2024
  	$mac_hi = strtoupper($mac[0] . $mac[1] . $mac[3] . $mac[4] . $mac[6] . $mac[7]);
  ?>
  				<tr>
-@@ -301,7 +303,7 @@
- <?php if ($data['online'] === $online_string): ?>
- 						<i class="fa fa-arrow-up text-success online" title="<?=htmlspecialchars($data['online'])?>"></i>
- <?php else: ?>
--						<i class="fa fa-arrow-down online" title="<?=htmlspecialchars($data['online'])?>"></i>
-+						<i class="fa"></i>
- <?php endif; ?>
- 					</td>
- 					<td><?=htmlspecialchars($data['ip'])?></td>
 @@ -312,7 +314,7 @@
  <?php endif; ?>
  						<?=htmlspecialchars($mac)?>
